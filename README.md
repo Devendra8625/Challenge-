@@ -23,7 +23,7 @@ Follow these steps to set up the project locally:
 
 1. Clone the repository
 Clone the repository to your local machine:
-git clone https://github.com/RAVISHANKAR566/user-notification-preferences-api
+git clone https:
 cd your-repo-name
 
 
