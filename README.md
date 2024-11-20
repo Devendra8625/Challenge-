@@ -23,7 +23,7 @@ Follow these steps to set up the project locally:
 
 1. Clone the repository
 Clone the repository to your local machine:
-git clone https:
+git clone https:git@github.com:Devendra8625/Challenge-.git
 cd your-repo-name
 
 
