@@ -1,50 +1,41 @@
-User Notification Preferences API
-Description
-This is a NestJS-based API for managing user notification preferences and sending notifications. The system allows users to manage their preferences for marketing, newsletter, and updates, and specify their preferred notification channels (email, SMS, push). It also supports the sending of notifications to users based on their preferences.
+# User Notification Preferences API
 
-Features
-User Preferences Management:
-Create, read, update, and delete user preferences.
-Manage preferences for different notification types and channels.
-Notification Management:
-Send notifications to users.
-Log notifications with their status (sent/pending/failed).
-Basic Error Handling and Input Validation.
-API Endpoints
-POST /api/preferences – Create or update user preferences.
-GET /api/preferences/:userId – Get user preferences by userId.
-PATCH /api/preferences/:userId – Update user preferences.
-DELETE /api/preferences/:userId – Delete user preferences.
-POST /api/notifications/send – Send a notification to a user.
-GET /api/notifications/:userId/logs – Get notification logs for a user.
-GET /api/notifications/stats – Get statistics for notifications.
-Setup Instructions
-Follow these steps to set up the project locally:
+This project is a serverless API built using **Nest.js** and **MongoDB** to manage user notification preferences and simulate sending notifications. The API supports CRUD operations for user preferences, logging notification activities, and providing basic statistics.
 
-1. Clone the repository
-Clone the repository to your local machine:
-git clone https:git@github.com:Devendra8625/Challenge-.git
-cd your-repo-name
+---
 
+## Features
+- **User Preferences Management**: Create, read, update, and delete user notification preferences.
+- **Notification Simulation**: Simulate sending notifications to users through different channels (Email, SMS, Push).
+- **Logging & Statistics**: Logs all notifications and provides insights into their statuses.
+- **Validation**: Enforces data integrity with `class-validator`.
+- **Rate Limiting**: Limits the number of requests to prevent abuse.
+- **Swagger Documentation**: API documentation is available for easy exploration.
+- **Serverless Ready**: Deployable on platforms like AWS Lambda or Vercel.
 
-2. Install dependencies
-Install the required dependencies:
-npm install
+---
 
+## Prerequisites
+- **Node.js** (v16 or above)
+- **npm** or **yarn**
+- **MongoDB** (local or cloud, e.g., MongoDB Atlas)
 
-4. MongoDB Setup
-Since you already have a MongoDB instance, you'll need to configure the connection in your environment variables.
-Go to your MongoDB Atlas or your local MongoDB instance and get the connection string.
-Create a .env file in the root directory of your project and add the following environment variables:
+---
 
-MONGO_URI=your-mongodb-connection-string
+## Installation
 
-4. Run the application
-Start the application in development mode:
-npm run start
-Your application should now be running on http://localhost:3000.
+1. **Clone the repository**:
+   git clone <repository-url>
+   cd user-notification-preferences-api
+   
+2. Install dependencies:
+  npm install
 
-5. Swagger API Documentation
-Once the app is running, you can visit the Swagger API documentation at:
-http://localhost:3000/api
-This will provide an interactive UI where you can test the API endpoints.
+3. Set up environment variables:
+  PORT=3000
+  MONGO_URI=mongodb://localhost:27017/notification-preferences
+
+4. Run the project:
+  npm run start:dev
+
+  
